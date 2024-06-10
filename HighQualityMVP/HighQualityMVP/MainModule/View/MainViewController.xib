@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="HighQualityMVP" customModuleProvider="target">
             <connections>
-                <outlet property="greetingLabel" destination="jDd-kv-1tQ" id="4Dl-0X-4RW"/>
+                <outlet property="myTableView" destination="vX4-Ad-D6w" id="ahc-s6-xHV"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3gK-Ai-iyC"/>
             </connections>
         </placeholder>
@@ -19,28 +19,22 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDd-kv-1tQ">
-                    <rect key="frame" x="175.66666666666666" y="215.66666666666666" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58u-0f-eYh">
-                    <rect key="frame" x="159" y="608.66666666666663" width="75" height="35"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vX4-Ad-D6w">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
-                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="sJV-4d-IY8"/>
+                        <outlet property="dataSource" destination="-1" id="nwG-jO-4jP"/>
+                        <outlet property="delegate" destination="-1" id="u1G-I4-x6V"/>
                     </connections>
-                </button>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="jDd-kv-1tQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GPG-lT-o7M"/>
-                <constraint firstItem="jDd-kv-1tQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-200" id="OGj-PA-cQk"/>
-                <constraint firstItem="58u-0f-eYh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q6Q-LQ-msq"/>
-                <constraint firstItem="58u-0f-eYh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="200" id="zCn-2A-Ufl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vX4-Ad-D6w" secondAttribute="bottom" id="6Cg-gn-YcG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vX4-Ad-D6w" secondAttribute="trailing" id="6u2-bR-6J8"/>
+                <constraint firstItem="vX4-Ad-D6w" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9xH-fS-ASH"/>
+                <constraint firstItem="vX4-Ad-D6w" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="sCH-5z-kAc"/>
             </constraints>
             <point key="canvasLocation" x="79" y="20"/>
         </view>
