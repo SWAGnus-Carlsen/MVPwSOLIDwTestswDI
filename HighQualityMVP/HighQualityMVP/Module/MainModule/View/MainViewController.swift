@@ -25,6 +25,17 @@ class MainViewController: UIViewController {
 
 }
 
+extension MainViewController: MainViewProtocol {
+    func success() {
+        myTableView.reloadData()
+    }
+    
+    func failure(error: Error) {
+        print(error.localizedDescription)
+    }
+}
+
+//MARK: - Table Data Source
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.comments?.count ?? 0
@@ -41,6 +52,7 @@ extension MainViewController: UITableViewDataSource {
     
 }
 
+//MARK: - Table Delegate
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -48,14 +60,4 @@ extension MainViewController: UITableViewDelegate {
         presenter.tapOnComment(comment: comment)
     }
     
-}
-
-extension MainViewController: MainViewProtocol {
-    func success() {
-        myTableView.reloadData()
-    }
-    
-    func failure(error: Error) {
-        print(error.localizedDescription)
-    }
 }

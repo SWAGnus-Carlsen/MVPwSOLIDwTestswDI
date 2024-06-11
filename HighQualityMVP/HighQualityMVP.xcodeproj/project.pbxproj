@@ -105,8 +105,7 @@
 				122983B12C165610007F1C28 /* ModuleBuilder.swift */,
 				122983C42C174BE2007F1C28 /* Router.swift */,
 				122983BA2C171154007F1C28 /* ServiceLayer */,
-				122983BE2C172263007F1C28 /* DetailModule */,
-				122983AB2C1654C8007F1C28 /* MainModule */,
+				122983C82C18A7C5007F1C28 /* Module */,
 				1229837D2C164FEF007F1C28 /* Main.storyboard */,
 				122983802C164FF2007F1C28 /* Assets.xcassets */,
 				122983822C164FF2007F1C28 /* LaunchScreen.storyboard */,
@@ -128,8 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				122983AC2C1654D7007F1C28 /* View */,
-				122983AD2C1654DD007F1C28 /* Model */,
 				122983AE2C1654E4007F1C28 /* Presenter */,
+				122983AD2C1654DD007F1C28 /* Model */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -200,6 +199,15 @@
 				122983C02C172289007F1C28 /* DetailViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		122983C82C18A7C5007F1C28 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				122983AB2C1654C8007F1C28 /* MainModule */,
+				122983BE2C172263007F1C28 /* DetailModule */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
